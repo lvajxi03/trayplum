@@ -17,6 +17,8 @@ jobs:
       run: msbuild TrayPlum.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
     - name: Find artifacts
       run: Get-ChildItem -Path . -Recurse -filter *.exe
+    - name: Where am I?
+      run: Get-ChildItem -Path .
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
