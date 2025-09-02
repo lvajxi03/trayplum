@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - bugfix/build
+      - main
 
 jobs:
   build:
@@ -15,10 +15,6 @@ jobs:
       uses: microsoft/setup-msbuild@v2
     - name: Build
       run: msbuild TrayPlum.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
-    - name: Find artifacts
-      run: Get-ChildItem -Path . -Recurse -filter *.exe
-    - name: Where am I?
-      run: Get-ChildItem -Path .
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
