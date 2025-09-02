@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - main
+      - bugfix/build
 
 jobs:
   build:
@@ -14,11 +14,13 @@ jobs:
     - name: Setup msbuild
       uses: microsoft/setup-msbuild@v2
     - name: Build
-      run: msbuild TrayPlum.vcxproj -t:rebuild -verbosity:diag -property:Confirmation=Release
+      run: msbuild TrayPlum.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Release
+    - name: Find artifacts
+      run: dir /s TrayPlum.exe
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
         name: helik-dist
         path: |
-          x64\Release\TrayPlum.exe
+          TrayPlum\Release\TrayPlum.exe
 
