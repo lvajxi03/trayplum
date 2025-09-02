@@ -45,5 +45,14 @@
     <Image Include="TrayPlum.ico">
       <Filter>Pliki zasobów</Filter>
     </Image>
+    <Image Include="BigTrayPlum.ico">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="BigTrayPlum.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="BigTrayPlum.bmp">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>

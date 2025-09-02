@@ -8,6 +8,7 @@
 #define WIN32_LEAN_AND_MEAN             // Wyklucz rzadko używane rzeczy z nagłówków systemu Windows
 // Pliki nagłówkowe systemu Windows
 #include <windows.h>
+#include <shellapi.h>
 // Pliki nagłówkowe środowiska uruchomieniowego języka C
 #include <stdlib.h>
 #include <malloc.h>

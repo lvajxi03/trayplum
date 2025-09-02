@@ -135,6 +135,9 @@
     <ResourceCompile Include="TrayPlum.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="BigTrayPlum.bmp" />
+    <Image Include="BigTrayPlum.ico" />
+    <Image Include="BigTrayPlum.png" />
     <Image Include="small.ico" />
     <Image Include="TrayPlum.ico" />
   </ItemGroup>
